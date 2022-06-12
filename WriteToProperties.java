@@ -20,6 +20,7 @@ public class WriteToProperties {
         } else {
             numInt++;
         }
+        inputStream.close();
         /**
          * code block goes here
          */
@@ -29,5 +30,6 @@ public class WriteToProperties {
         FileOutputStream outputStream = new FileOutputStream(inputFilePath);
         prop.setProperty("num", newNum);
         prop.store(outputStream,null);
+        outputStream.close();
     }
 }
